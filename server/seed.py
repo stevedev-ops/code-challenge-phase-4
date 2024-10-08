@@ -1,5 +1,4 @@
 from random import choice as rc
-
 from app import app
 from models import db, Hero, Power, HeroPower
 
@@ -17,7 +16,6 @@ if __name__ == '__main__':
             Power(name="super human senses", description="allows the wielder to use her senses at a super-human level"),
             Power(name="elasticity", description="can stretch the human body to extreme lengths"),
         ]
-
         db.session.add_all(powers)
 
         print("Seeding heroes...")
@@ -33,7 +31,6 @@ if __name__ == '__main__':
             Hero(name="Kitty Pryde", super_name="Shadowcat"),
             Hero(name="Elektra Natchios", super_name="Elektra"),
         ]
-
         db.session.add_all(heroes)
 
         print("Adding powers to heroes...")
